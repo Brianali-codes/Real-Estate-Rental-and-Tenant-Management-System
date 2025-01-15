@@ -213,6 +213,7 @@ const RealEstateDetail = () => {
                     <strong>{realEstate?.title}</strong> with ID:{" "}
                     {realEstate?.propertyId}.
                   </p>
+                  
                   <p>
                     Kindly contact me at {user?.email} or +977{" "}
                     {user?.phoneNumber}.

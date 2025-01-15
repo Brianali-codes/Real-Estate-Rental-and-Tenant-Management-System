@@ -5,7 +5,7 @@ import { Logo, AlertToast, Footer } from "../components";
 import landingImg from "../assets/images/landing1.svg";
 import landingImg2 from "../assets/images/landing2.svg";
 import landingTitle from "../assets/images/landingTitle.svg";
-
+import PieChart from "../components/pie";
 import { Button } from "@mui/material";
 import { clearAlert } from "../features/auth/authSlice";
 
@@ -61,6 +61,7 @@ const Landing = () => {
             property if you are a tenant.
           </p>
         </div>
+        <PieChart/>
         <div className="flex mt-8 gap-8 flex-wrap w-2/3 justify-center">
           <Button
             variant="contained"

@@ -27,20 +27,22 @@ const PostRealEstate = () => {
   const { alertFlag, alertMsg, alertType, isLoading, postSuccess, realEstate } =
     useSelector((store) => store.realEstateOwner);
 
-  const initialFormValues = {
-    title: "",
-    price: "",
-    description: "",
-    streetName: "",
-    city: "",
-    state: "",
-    country: "",
-    countryCode: "",
-    category: "",
-    area: "",
-    floors: "",
-    facing: "",
-  };
+    const initialFormValues = {
+      title: "",
+      price: "",
+      description: "",
+      streetName: "",
+      city: "",
+      state: "",
+      country: "",
+      countryCode: "",
+      category: "",
+      area: "",
+      floors: "",
+      facing: "",
+      units: "", // Added units field
+    };
+    
 
   const [values, setFormValues] = useState(initialFormValues);
 
@@ -234,6 +236,23 @@ const PostRealEstate = () => {
                       ),
                     }}
                   />
+
+                  <TextField
+                    label="Units"
+                    name="units"
+                    type="number"
+                    placeholder="Number of units available"
+                    required
+                    value={values.units}
+                    color="tertiary"
+                    onChange={handleChange}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">units</InputAdornment>
+                      ),
+                    }}
+                  />
+
                   <FormSelectField
                     label="Property Facing"
                     name="facing"
@@ -249,6 +268,7 @@ const PostRealEstate = () => {
                     ]}
                     value={values.facing}
                     handleChange={handleChange}
+                    
                   />
                 </div>
                 <div className="flex flex-col my-2">

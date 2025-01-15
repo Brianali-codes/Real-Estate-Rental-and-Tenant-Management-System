@@ -108,6 +108,9 @@ const AllRentalProperties = () => {
                     <span className="font-semibold text-xs text-gray-600">
                       {propertyOwner?.firstName} {propertyOwner?.lastName}
                     </span>
+                    <p className="font-robotoNormal text-xs tracking-tight">
+                    Units Available: {propertyOwner.units}
+                  </p>
                   </div>
                   <Link
                     to={`/tenant/owner-user/${propertyOwner?.slug}`}

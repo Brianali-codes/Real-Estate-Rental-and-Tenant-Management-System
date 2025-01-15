@@ -65,7 +65,6 @@ const RealEstateSchema = new mongoose.Schema(
       min: [1, "Number of floors cannot be less than 1"],
       max: [200, "Number of floors cannot be more than 200"],
     },
-
     facing: {
       type: String,
       required: [true, "Please provide the facing direction of the property"],
@@ -83,7 +82,6 @@ const RealEstateSchema = new mongoose.Schema(
         message: "{VALUE} is not in the facing list",
       },
     },
-
     category: {
       type: String,
       required: [true, "Please provide a category for the property"],
@@ -92,18 +90,20 @@ const RealEstateSchema = new mongoose.Schema(
         message: "{VALUE} is not in the category list",
       },
     },
-
     status: {
       type: Boolean,
       default: true,
     },
-
     realEstateImages: [Object],
-
     propertyOwner: {
       type: mongoose.Types.ObjectId,
       ref: "OwnerUser",
       required: [true, "Please provide a property owner"],
+    },
+    units: {
+      type: Number,
+      required: [true, "Please provide the number of units available"],
+      min: [1, "Units cannot be less than 1"],
     },
   },
   { timestamps: true }

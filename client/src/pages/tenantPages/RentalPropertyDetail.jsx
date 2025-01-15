@@ -65,6 +65,9 @@ const RentalPropertyDetail = () => {
                   <p className="font-robotoNormal text-xs tracking-tight">
                     Id: {realEstate?.propertyId}
                   </p>
+                  <p className="font-robotoNormal text-xs tracking-tight">
+                    Units Available: {realEstate?.units}
+                  </p>
                 </div>
               </div>
               <div className="">
@@ -73,7 +76,7 @@ const RentalPropertyDetail = () => {
                     RENT per month
                   </p>
                   <span className="font-semibold text-lg text-primaryDark">
-                    NPR. {format(realEstate?.price)}
+                    kshs. {format(realEstate?.price)}
                   </span>
                 </div>
               </div>

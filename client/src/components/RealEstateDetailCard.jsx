@@ -45,7 +45,7 @@ const RealEstateDetailCard = ({
                 RENT per month
               </p>
               <span className="font-semibold text-lg text-primaryDark">
-                NPR. {format(price)}
+                Kshs. {format(price)}
               </span>
               <div>
                 <p className="font-roboto text-gray-500">{category}</p>

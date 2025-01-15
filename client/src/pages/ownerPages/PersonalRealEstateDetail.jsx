@@ -102,6 +102,7 @@ const PersonalRealEstateDetail = () => {
                   {realEstate?.address?.city},{" "}
                   {realEstate?.address?.state}, {" "}
                   {realEstate?.address?.country}
+                  
                 </p>
                 <div className="">
                   <p className="font-robotoNormal text-xs font-semibold tracking-tight">
@@ -110,6 +111,11 @@ const PersonalRealEstateDetail = () => {
                   <p className="font-robotoNormal text-xs tracking-tight">
                     Id: {realEstate?.propertyId}
                   </p>
+                  <p className="font-robotoNormal text-xs tracking-tight">
+                    Units Available: {realEstate?.units}
+                  </p>
+
+                  
                 </div>
               </div>
               <div className="">
@@ -118,7 +124,7 @@ const PersonalRealEstateDetail = () => {
                     RENT per month
                   </p>
                   <span className="font-semibold text-lg text-primaryDark">
-                    NPR. {format(realEstate?.price)}
+                    Kshs. {format(realEstate?.price)}
                   </span>
                 </div>
               </div>

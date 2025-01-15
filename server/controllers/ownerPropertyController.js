@@ -174,3 +174,4 @@ export {
   updatePropertyDetails,
   deleteProperty,
 };
+
